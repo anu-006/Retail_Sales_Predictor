@@ -7,15 +7,22 @@ I faced challenges with accuracy early on, where baseline models struggled to ex
 
 # Challenges Faced
 Accuracy Plateau: Initial models such as Linear Regression and Decision Trees produced R² scores around 0.55–0.60, highlighting underfitting.
+
 Feature Noise: Raw features like Item_Visibility and Item_MRP introduced noise and did not capture business meaning.
+
 Categorical Inconsistencies: Labels such as LF, low fat, and Low Fat required cleaning to avoid misleading encodings.
+
 Model Bias: Linear models could not capture nonlinear retail dynamics, limiting accuracy.
 
 # Feature Engineering
 To overcome these issues, I applied several transformations:
+
 Outlet Age: Derived from Outlet_Establishment_Year to capture the effect of outlet maturity.
+
 Item MRP Binning: Grouped continuous MRP values into four price bands (Low, Medium, High, Very High) to reflect pricing tiers.
+
 Item Visibility Binning: Converted continuous visibility into categorical bins (Low, Medium, High, Very High) to reduce noise.
+
 Log Transformation: Applied np.log1p to the target variable (Item_Outlet_Sales) to stabilize variance and improve model fit.
 
 These engineered features provided clearer business context and improved model interpretability.
