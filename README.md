@@ -24,10 +24,15 @@ These engineered features provided clearer business context and improved model i
 I tested multiple models to identify the best performer:
 
 Linear Regression: R² = 0.7230
+
 SVR: R² = 0.7206
+
 XGBoost (default): R² = 0.6948
+
 SGD: R² = 0.7207
+
 Decision Tree: R² = 0.4677
+
 Random Forest (default): R² = 0.6986
 
 # Hyperparameter Tuning
@@ -45,9 +50,14 @@ Tuned Test R²: 0.7307
 
 # Results
 Through feature engineering and model tuning, I improved accuracy from ~0.57 baseline to 0.73 R² on the test set. This demonstrates the importance of:
+
 -> Cleaning categorical variables.
+
 -> Transforming continuous features into meaningful bins.
+
 -> Using outlet age as a numeric predictor.
+
 -> Applying log transformation to stabilize target variance.
+
 -> Leveraging ensemble methods with tuned hyperparameters.
 
